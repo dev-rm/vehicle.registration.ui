@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RegistrationService } from '../../services/registration.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
