@@ -9,6 +9,9 @@ import { RegistrationService } from './services/registration.service';
 import { HomeComponent } from './components/home/home.component';
 import { ViewRegistrationComponent } from './components/view-registration/view-registration.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { CallbackComponent } from './components/callback/callback.component';
+import { AuthService } from './services/auth.service';
+import { AuthGuard } from './services/auth.guard';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,7 @@ import { AdminComponent } from './components/admin/admin.component';
     HomeComponent,
     ViewRegistrationComponent,
     AdminComponent,
+    CallbackComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -23,7 +27,7 @@ import { AdminComponent } from './components/admin/admin.component';
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [RegistrationService],
+  providers: [RegistrationService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
